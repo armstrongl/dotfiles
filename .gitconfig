@@ -1,0 +1,51 @@
+[user]
+	name = Larah Armstrong
+	email = armstrong.llarah@gmail.com
+	username = armstrongl
+[core]
+	editor = vim
+[color]
+	ui = auto
+[diff]
+	tool = vimdiff
+[alias]
+	g = git
+	a = add --all
+	ai = add -i
+
+	b = branch
+	ba = branch -a
+	bd = branch -d
+	bdd = branch -D
+	br = branch -r
+	bc = rev-parse --abrev-ref HEAD
+	bu = !git rev-parse --abbrev-ref --symbolic-full-name "@{u}"
+	bs = !git-branch-status
+
+	c = commit
+	ca = commit -a
+	cm = commit -m
+	cam = commit -am
+	cem = commit --allow-empty -m
+	cd = commit --amend
+	cad = commit -a --amend
+	ced = commit --allow-empty --amend
+
+	cl = clone
+	cld = clone --depth 1
+
+	cp = cherry-pick
+	cpa = cherry-pick --abort
+	cpc = cherry-pick --continue
+
+	sa = stash apply
+	sc = stash clear
+	sd = stash drop
+	sl = stash list
+	sp = stash pop
+	ss = stash save
+	ssk = stash save -k
+	sw = stash show
+
+[commit]
+	template = ~/.gitmessage
