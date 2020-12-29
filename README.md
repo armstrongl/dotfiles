@@ -1,4 +1,6 @@
-# My Vim Configuration
+# README
+
+## My Vim Configuration
 
 This is my custom configuration for using Vim as an IDE for Golang.
 
