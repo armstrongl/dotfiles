@@ -12,5 +12,5 @@ Before you start using this `.vimrc` file, you'll need to make sure Vim is updat
 4. Open the `.vimrc` file, then run `:PlugInstall` to install all the plugins. 
 
 A few tips: 
-- To access nerdtree, press `CTRL` + `T`. 
-- To switch from nerdtree back to the file editor, press `CTRL` + `ww`. 
+- To access NERD tree, press `CTRL` + `T`. 
+- To switch from NERD tree back to the file editor, press `CTRL` + `ww`. 
