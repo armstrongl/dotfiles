@@ -10,7 +10,7 @@ call plug#begin('~/.vim/plugged')
 " -- Essential plugins
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'bling/vim-airline'
+" Plug 'bling/vim-airline'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-surround'
