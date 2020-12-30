@@ -1,6 +1,22 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 #
+# ----- aliases -----
+
+# Pretty GET function 
+cget() {
+	ENDPOINT=$1
+	echo "Endpoint: $ENDPOINT"
+	curl --header 'Content-Type: application/json' $ENDPOINT | python -m json.tool
+}
+
+# Pretty POST function 
+cpost() {
+	ENDPOINT=$1
+	# Example: '{"id":"123","name":"SomeName"}'
+	BODY=$2
+	curl --header 'Content-Type: application/json' $ENDPOINT -d $BODY | python -m json.tool
+}
 
 alias ls='ls --color=auto'
 
@@ -100,7 +116,7 @@ ZSH_THEME="gianu"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
