@@ -30,6 +30,10 @@ if ls --color -d . >/dev/null 2>&1; then  # GNU ls
   alias l='ls -l -a'
 fi
 
+alias q='exit'
+alias c='clear'
+alias h='history'
+
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -81,7 +85,7 @@ export ZSH="/home/larah/.oh-my-zsh"
 # "gianu"
 # "miloshadzic"
 #
-ZSH_THEME="gianu"
+ZSH_THEME="robbyrussell"
 
 
 # Set list of themes to pick from when loading at random
