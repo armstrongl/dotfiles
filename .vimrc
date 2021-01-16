@@ -10,26 +10,34 @@ call plug#begin('~/.vim/plugged')
 " -- Essential plugins
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" Plug 'bling/vim-airline'
+Plug 'bling/vim-airline'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-surround'
 " -- End essential plugins
 
 " -- IDE appearance plugins
-Plug 'altercation/vim-colors-solarized'
-Plug 'tomasr/molokai'
+Plug 'morhetz/gruvbox'
 " -- End IDE appearance plugins
 
 " -- IDE as text editor plugins
 Plug 'preservim/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'fatih/vim-go'
-" Code completion
+
+" -- Code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
 " -- End IDE as text editor plugins
 
+" -- Experimental plugins
+" Plug 'othree/javascript-libraries-syntax.vim'
+" Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+" Plug 'joshdick/onedark.vim'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdcommenteri'
+Plug 'nathanaelkane/vim-indent-guides'
+" -- End Experimental plugins
 " ----- End plugin list -----
 
 " All of your Plugins must be added before the following line
@@ -69,14 +77,27 @@ hi CursorLine ctermbg=darkblue ctermfg=white
 hi CursorLineNR ctermbg=yellow ctermfg=black
 
 syntax on			" Syntax highlighting
+set termguicolors       " Needed for gruvbox color support
+set background=dark
 " ----- End General settings -----
 
-" ----- Plugin configurations -----
+" ----- Plugin configurations -----\
+let NERDTreeShowHidden=1
+let NERDTreeShowLineNumbers=1
+let g:nerdtree_tabs_open_on_console_startup=1
+let g:nerdtree_tabs_focus_on_files=1
+
+let g:gruvbox_contrast_dark="hard"
+let g:gruvbox_italic=1
+
+colorscheme gruvbox
 " ----- End Plugin configurations
 
 " ----- Custom key mappings
 " Open/Close ("toggle") the NERDTree file navigator window
 nnoremap <C-t> :NERDTreeToggle<CR>
+" fzf command open the search pane
+map ; :Files<CR>
 " ----- End custom key mappings
 
 " -- vim-go configurations
